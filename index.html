@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>测试项目 by amesty</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>测试项目</h1>
+        <p>github测试</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/amesty/iLoveLovin" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/amesty/iLoveLovin/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/amesty/iLoveLovin/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a id="ilovelovin" class="anchor" href="#ilovelovin" aria-hidden="true"><span class="octicon octicon-link"></span></a>iLoveLovin</h1>
+
+<h1>
+<a id="import-viewcontrollerh" class="anchor" href="#import-viewcontrollerh" aria-hidden="true"><span class="octicon octicon-link"></span></a>import "ViewController.h"</h1>
+
+<h1>
+<a id="import-" class="anchor" href="#import-" aria-hidden="true"><span class="octicon octicon-link"></span></a>import </h1>
+
+<p><a href="https://github.com/interface" class="user-mention">@interface</a> ViewController ()</p>
+
+<p><a href="https://github.com/end" class="user-mention">@end</a></p>
+
+<p><a href="https://github.com/implementation" class="user-mention">@implementation</a> ViewController</p>
+
+<ul>
+<li><p>(void)viewDidLoad {
+[super viewDidLoad];
+// Do any additional setup after loading the view, typically from a nib.
+}</p></li>
+<li><p>(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+[self pthreadDemo];
+}</p></li>
+</ul>
+
+<p>// MARK: - pthread 演练
+// 创建线程，并且在线程中执行 demo 函数</p>
+
+<ul>
+<li>
+<p>(void)pthreadDemo {
+/**
+ 参数：
+ 1&gt; 指向线程标识符的指针，C 语言中类型的结尾通常 _t/Ref，而且不需要使用 *
+ 2&gt; 用来设置线程属性
+ 3&gt; 线程运行函数的起始地址
+ 4&gt; 运行函数的参数</p>
+
+<p>返回值：</p>
+
+<ul>
+<li>若线程创建成功，则返回0</li>
+<li>若线程创建失败，则返回出错编号
+*/
+pthread_t threadId = NULL;
+NSString *str = @"Hello Pthread";
+int result = pthread_create(&amp;threadId, NULL, demo, (__bridge void *)(str));</li>
+</ul>
+
+<p>if (result == 0) {
+    NSLog(@"创建线程 OK");
+} else {
+    NSLog(@"创建线程失败 %d", result);
+}
+}
+// 后台线程调用函数
+void *demo(void *params) {
+NSString *str = (__bridge NSString *)(params);</p>
+
+<p>NSLog(@"%@ - %@", [NSThread currentThread], str);</p>
+
+<p>return NULL;
+}</p>
+</li>
+</ul>
+
+<p><a href="https://github.com/end" class="user-mention">@end</a></p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/amesty">amesty</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
